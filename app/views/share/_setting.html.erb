@@ -115,6 +115,7 @@
 			$("body").removeClass('boxed-layout');
 			$("body").addClass('fixed-nav');
 			$('#boxedlayout').prop('checked', false);
+			$("#leftbar_first_li").height(0);
 
 			if (localStorageSupport) {
 				localStorage.setItem("boxedlayout",'off');
@@ -126,6 +127,7 @@
 		} else {
 			$(".navbar-fixed-top").removeClass('navbar-fixed-top').addClass('navbar-static-top');
 			$("body").removeClass('fixed-nav');
+			$("#leftbar_first_li").height(60);
 
 			if (localStorageSupport) {
 				localStorage.setItem("fixednavbar",'off');
