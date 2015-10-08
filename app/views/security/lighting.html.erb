@@ -1,0 +1,47 @@
+<div class="text-center animated fadeInRightBig clearfix">
+  <div class="left-nav">
+    <div class="show-picture col-md-12">
+    <%#= image_tag "infrared.png", class: "img-responsive", width:"100%" %>
+    <div class="col-md-4 lighting-off">
+    <div class="col-md-12 light-tab">
+      <div class="col-md-5">
+        <%= image_tag "lighting_on.png", class: "img-responsive", width:"100%" %>
+      </div>
+      <div class="col-md-7">
+        <div class="col-md-12"><p>运行时间</p><p>08：30：30</p></div>
+        <div class="col-md-12 btn-table">
+          <table>
+            <tr>
+              <td style="background-color: #7f7f7f; color: #fff">开启</td>
+              <td>手动</td>
+              <td>自动</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    </div>
+    <% 5.times do |i| %>
+    <div class="col-md-4 lighting-on">
+    <div class="col-md-12 light-tab">
+      <div class="col-md-5">
+        <%= image_tag "lighting_on.png", class: "img-responsive", width:"100%" %>
+      </div>
+      <div class="col-md-7">
+        <div class="col-md-12"><p>运行时间</p><p>08：30：30</p></div>
+        <div class="col-md-12 btn-table">
+          <table>
+            <tr>
+              <td>开启</td>
+              <td>手动</td>
+              <td>自动</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    </div>
+    <% end %>
+    </div>
+  </div>
+</div>

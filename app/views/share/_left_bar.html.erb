@@ -1,0 +1,60 @@
+<nav class="navbar-default navbar-static-side" role="navigation">
+	<div class="sidebar-collapse">
+		<ul class="nav metismenu" id="side-menu">
+			<!-- brand -->
+				<li class="<%= "active" if params[:controller] == 'security'&& params[:action] == 'evevator' %>">
+					<%= link_to evevator_security_index_path do %>
+						<i class="fa fa-th-large"></i> <span class="nav-label">电梯界面</span></span>
+					<% end %>
+				</li>
+
+				<li class="<%= 'active' if params[:controller] == 'security' && params[:action] == 'infrared' %>" >
+					<%= link_to infrared_security_index_path do %>
+					<i class="fa fa-th-large"></i> <span class="nav-label">红外入侵告警界面</span>
+					<% end %>
+				</li>
+
+				<li class="<%= 'active' if params[:controller] == 'security' && params[:action] == 'air_condition' %>" >
+					<%= link_to air_condition_security_index_path do %>
+					<i class="fa fa-th-large"></i> <span class="nav-label">空调界面</span>
+					<% end %>
+				</li>
+
+				<li class="<%= 'active' if params[:controller] == 'security' && params[:action] == 'door' %>" >
+					<%= link_to door_security_index_path do %>
+					<i class="fa fa-th-large"></i> <span class="nav-label">门界面</span>
+					<% end %>
+				</li>
+
+				<li class="<%= 'active' if params[:controller] == 'security' && params[:action] == 'entrance_guard' %>" >
+					<%= link_to entrance_guard_security_index_path do %>
+					<i class="fa fa-th-large"></i> <span class="nav-label">门禁界面</span>
+					<% end %>
+				</li>
+
+				<li class="<%= 'active' if params[:controller] == 'security' && params[:action] == 'dewatering' %>" >
+					<%= link_to dewatering_security_index_path do %>
+					<i class="fa fa-th-large"></i> <span class="nav-label">排水系统界面</span>
+					<% end %>
+				</li>
+
+				<li class="<%= 'active' if params[:controller] == 'security' && params[:action] == 'park' %>" >
+					<%= link_to park_security_index_path do %>
+					<i class="fa fa-th-large"></i> <span class="nav-label">停车场界面</span>
+					<% end %>
+				</li>
+
+				<li class="<%= 'active' if params[:controller] == 'security' && params[:action] == 'lighting' %>" >
+					<%= link_to lighting_security_index_path do %>
+					<i class="fa fa-th-large"></i> <span class="nav-label">照明系统界面</span>
+					<% end %>
+				</li>
+
+				<li class="<%= 'active' if params[:controller] == 'security' && params[:action] == 'phone' %>" >
+					<%= link_to phone_security_index_path do %>
+					<i class="fa fa-th-large"></i> <span class="nav-label">手机APP界面</span>
+					<% end %>
+				</li>
+		</ul>
+	</div>
+</nav>
