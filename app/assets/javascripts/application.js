@@ -18,5 +18,7 @@
 //= require ./frame/pace.min
 //= require ./frame/jquery.slimscroll.min
 //= require ./frame/jquery.metisMenu
+//= require ./echarts/echarts
+//= require_tree ./echarts/chart
 //= require_tree ./application/.
 //= require turbolinks
