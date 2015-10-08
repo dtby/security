@@ -17,8 +17,6 @@
 //= require ./frame/inspinia
 //= require ./frame/pace.min
 //= require ./frame/jquery.slimscroll.min
-//= require ./frame/chosen.jquery
 //= require ./frame/jquery.metisMenu
-//= require ./frame/switchery
 //= require_tree ./admin/.
 //= require turbolinks

@@ -13,10 +13,8 @@
  *= require ./frame/animate
  *= require ./frame/font-awesome
  *= require ./frame/style
- *= require ./frame/switchery
  *= require_tree ./application/.
  *= require global
- *= require security
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";

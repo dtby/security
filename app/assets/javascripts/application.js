@@ -18,6 +18,5 @@
 //= require ./frame/pace.min
 //= require ./frame/jquery.slimscroll.min
 //= require ./frame/jquery.metisMenu
-//= require ./frame/switchery
 //= require_tree ./application/.
 //= require turbolinks
