@@ -15,6 +15,9 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require ./frame/inspinia
+//= require ./frame/morris
+//= require ./frame/morris-demo
+//= require ./frame/raphael-2.1.0.min
 //= require ./frame/pace.min
 //= require ./frame/jquery.slimscroll.min
 //= require ./frame/jquery.metisMenu

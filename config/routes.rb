@@ -31,6 +31,7 @@ Rails.application.routes.draw do
          get 'air_condition'
          get 'dewatering'
          get 'phone'
+         get 'chart'
        end
   #
   #     collection do

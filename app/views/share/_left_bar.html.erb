@@ -50,7 +50,11 @@
 					<i class="fa fa-fire"></i> <span class="nav-label">照明系统界面</span>
 					<% end %>
 				</li>
-
+				<li class="<%= 'active' if params[:controller] == 'security' && params[:action] == 'chart' %>" >
+					<%= link_to chart_security_index_path do %>
+					<i class="fa fa-money"></i> <span class="nav-label">费用监控界面</span>
+					<% end %>
+				</li>
 				<li class="<%= 'active' if params[:controller] == 'security' && params[:action] == 'phone' %>" >
 					<%= link_to phone_security_index_path do %>
 					<i class="fa fa-tablet"></i> <span class="nav-label">手机APP界面</span>

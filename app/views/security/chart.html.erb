@@ -1,0 +1,244 @@
+<div class="wrapper wrapper-content animated fadeInRight">
+	<div class="row">
+		<div class="col-lg-6">
+      <div class="ibox float-e-margins">
+        <div class="ibox-title">
+          <h5>Bar Chart Example </h5>
+        </div>
+        <div class="ibox-content">
+          <div id="morris-bar-chart">
+          	<div style="height:280px" id="pue"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="ibox float-e-margins">
+        <div class="ibox-title">
+          <h5>Bar Chart Example </h5>
+        </div>
+        <div class="ibox-content">
+          <div id="morris-bar-chart">
+          	<div style="height:280px" id="pie"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+	</div>
+	<div class="row">
+		<div class="col-lg-6">
+      <div class="ibox float-e-margins">
+        <div class="ibox-title">
+          <h5>Bar Chart Example </h5>
+        </div>
+        <div class="ibox-content">
+          <div id="morris-bar-chart">
+          	<div style="height:280px" id="bar"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="ibox float-e-margins">
+        <div class="ibox-title">
+          <h5>Bar Chart Example </h5>
+        </div>
+        <div class="ibox-content">
+          <div id="morris-bar-chart">
+          	<div style="height:280px" id="bars"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	// 路径配置
+	require.config({
+		paths: {
+			echarts: '/assets/echarts'
+		}
+	});	
+	// pue图表
+	require(
+	[
+		'echarts',
+		'echarts/chart/gauge'
+	],
+	function (pue){
+		var pueChart = pue.init(document.getElementById('pue')); 
+		var option = {
+			tooltip : {
+				formatter: "{a} <br/>{b} : {c}%"
+			},
+			series : [
+				{
+					name:'业务指标',
+					type:'gauge',
+					center: ['50%', '50%'],
+					radius: [0, '100%'],
+					detail : {formatter:'{value}%'},
+					data:[{value: 64}]
+				}
+			]
+		};
+			pueChart.setOption(option, true);
+	}
+);
+</script>
+
+
+<script type="text/javascript">
+	// 路径配置
+	require.config({
+		paths: {
+			echarts: '/assets/echarts'
+		}
+	});	
+	// 饼图表
+	require(
+	[
+		'echarts',
+		'echarts/chart/pie'
+	],
+	function (pie){
+		var pieChart = pie.init(document.getElementById('pie')); 
+		var option = {
+		    tooltip : {
+		        trigger: 'item',
+		        formatter: "{a} <br/>{b} : {c} ({d}%)"
+		    },
+		    legend: {
+		        orient : 'vertical',
+		        x : 'left',
+		        data:['物业人员的工资和福利','建筑物的维修和保养','设备维护和保养','保洁费用','绿化费用','治安和防盗费用','公共水电费','日常办公费用']
+		    },
+		    calculable : true,
+		    series : [
+		        {
+		            name:'访问来源',
+		            type:'pie',
+		            radius : '55%',
+		            center: ['60%', '50%'],
+		            data:[
+		                {value:400, name:'物业人员的工资和福利'},
+		                {value:150, name:'建筑物的维修和保养'},
+		                {value:100, name:'设备维护和保养'},
+		                {value:50, name:'保洁费用'},
+		                {value:50, name:'绿化费用'},
+		                {value:80, name:'治安和防盗费用'},
+		                {value:70, name:'公共水电费'},
+		                {value:100, name:'日常办公费用'}
+		            ]
+		        }
+		    ]
+		};
+		pieChart.setOption(option); 
+	}
+);
+</script>
+
+<script type="text/javascript">
+	// 路径配置
+	require.config({
+		paths: {
+			echarts: '/assets/echarts'
+		}
+	});	
+	// bar图表
+	require(
+	[
+		'echarts',
+		'echarts/chart/bar'
+	],
+	function (bar){
+		var barChart = bar.init(document.getElementById('bar')); 
+		var option = {
+		    tooltip : {
+		        trigger: 'axis'
+		    },
+		    legend: {
+		        data:['预算','实际支出']
+		    },
+		    calculable : true,
+		    xAxis : [
+		        {
+		            type : 'category',
+		            data : ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月']
+		        }
+		    ],
+		    yAxis : [
+		        {
+		            type : 'value'
+		        }
+		    ],
+		    series : [
+		        {
+		            name:'预算',
+		            type:'bar',
+		            data:[2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3],
+		        },
+		        {
+		            name:'实际支出',
+		            type:'bar',
+		            data:[2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3],
+		        }
+		    ]
+		};
+		barChart.setOption(option); 
+	}
+);
+</script>
+
+<script type="text/javascript">
+	// 路径配置
+	require.config({
+		paths: {
+			echarts: '/assets/echarts'
+		}
+	});	
+	// bar图表
+	require(
+	[
+		'echarts',
+		'echarts/chart/bar'
+	],
+	function (bars){
+		var barsChart = bars.init(document.getElementById('bars')); 
+		var option = {
+		    tooltip : {
+		        trigger: 'axis'
+		    },
+		    legend: {
+		        data:['本月','上月']
+		    },
+		    calculable : true,
+		    xAxis : [
+		        {
+		            type : 'category',
+		            data : ['物业','建筑','设备','保洁','绿化','治安','水电','办公']
+		        }
+		    ],
+		    yAxis : [
+		        {
+		            type : 'value'
+		        }
+		    ],
+		    series : [
+		        {
+		            name:'本月',
+		            type:'bar',
+		            data:[2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2],
+		        },
+		        {
+		            name:'上月',
+		            type:'bar',
+		            data:[2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2],
+		        }
+		    ]
+		};
+		barsChart.setOption(option); 
+	}
+);
+</script>
