@@ -16,5 +16,6 @@
  *= require_tree ./application/.
  *= require global
  */
+@import "variables";
 @import "bootstrap-sprockets";
 @import "bootstrap";
